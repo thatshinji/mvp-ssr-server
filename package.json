@@ -1,0 +1,29 @@
+{
+  "name": "mvp-ssr-server",
+  "version": "0.0.1",
+  "description": "a mvp ssr server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thatshinji/mvp-ssr-server.git"
+  },
+  "keywords": [
+    "ssr",
+    "react"
+  ],
+  "author": "thatshinji",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thatshinji/mvp-ssr-server/issues"
+  },
+  "homepage": "https://github.com/thatshinji/mvp-ssr-server#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "^8.25.0",
+    "eslint-plugin-react": "^7.31.10"
+  }
+}
