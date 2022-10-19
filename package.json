@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "npx nodemon --watch src server_build/bundle.js",
+    "build:server": "npx webpack build --config  ./webpack/webpack.server.js --watch"
   },
   "repository": {
     "type": "git",
@@ -22,13 +24,24 @@
   },
   "homepage": "https://github.com/thatshinji/mvp-ssr-server#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.19.4",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@types/express": "^4.17.14",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
+    "bable-loader": "^0.0.1-security",
     "eslint": "^8.25.0",
     "eslint-plugin-react": "^7.31.10",
     "husky": "^8.0.1",
-    "prettier": "^2.7.1"
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1",
+    "ts-loader": "^9.4.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
