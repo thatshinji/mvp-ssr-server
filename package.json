@@ -7,7 +7,8 @@
     "lint": "npx eslint",
     "prepare": "husky install",
     "start": "npx nodemon --watch src server_build/bundle.js",
-    "build:server": "npx webpack build --config  ./webpack/webpack.server.js --watch"
+    "build:server": "npx webpack build --config  ./webpack/webpack.server.js --watch",
+    "build:client": "npx webpack build --config  ./webpack/webpack.client.js --watch"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,10 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
