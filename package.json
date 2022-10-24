@@ -8,7 +8,8 @@
     "prepare": "husky install",
     "start": "npx nodemon --watch src server_build/bundle.js",
     "build:server": "npx webpack build --config  ./webpack/webpack.server.js --watch",
-    "build:client": "npx webpack build --config  ./webpack/webpack.client.js --watch"
+    "build:client": "npx webpack build --config  ./webpack/webpack.client.js --watch",
+    "dev": "npm-run-all --parallel build:server build:client start"
   },
   "repository": {
     "type": "git",

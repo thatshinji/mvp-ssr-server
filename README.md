@@ -2,6 +2,7 @@
 a mvp ssr server
 
 ### How to use
+#### one way
 ```shell
 npm run build:server
 ```
@@ -10,4 +11,8 @@ npm run build:client
 ```
 ```shell
 npm run start
+```
+#### or
+```shell
+npm run dev
 ```
