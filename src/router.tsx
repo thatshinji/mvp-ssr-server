@@ -1,6 +1,6 @@
-import React from 'react'
-import Home from './pages/home'
-import Demo from './pages/demo'
+import React from "react";
+import Home from "./pages/home";
+import Demo from "./pages/demo";
 
 type Router = {
   path: string
@@ -9,13 +9,13 @@ type Router = {
 
 const router: Router[] = [
   {
-    path: '/',
-    element: <Home/>
+    path: "/",
+    element: <Home />
   },
   {
-    path: '/demo',
+    path: "/demo",
     element: <Demo />
   }
-]
+];
 
-export default router
+export default router;

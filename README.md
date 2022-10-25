@@ -1,7 +1,7 @@
 # mvp-ssr-server
 a mvp ssr server
 
-### How to use
+### How to run
 #### one way
 ```shell
 npm run build:server
