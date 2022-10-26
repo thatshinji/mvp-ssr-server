@@ -7,22 +7,36 @@ import router from "../router";
 import { Route, Routes } from "react-router-dom";
 import { StaticRouter } from "react-router-dom/server";
 import { Helmet } from "react-helmet";
-
+import { serverStore } from "../store/store";
+import { Provider } from "react-redux";
+import bodyPaser from 'body-parser'
 const app = express();
 
 app.use(express.static(path.resolve(process.cwd(), "client_build")));
 
+app.use(bodyPaser.json())
+app.use(bodyPaser.urlencoded({extended: true}))
+
+app.post('/api/getDemoData', (req, res) => {
+  res.send({
+    data: req.body,
+    status_code: 0
+  })
+})
+
 app.get("*", (req, res) => {
   const content = renderToString(
-    <StaticRouter location={req.path}>
-      <Routes>
-        {
-          router?.map((item, idx) => (
-            <Route key={idx} {...item} />
-          ))
-        }
-      </Routes>
-    </StaticRouter>
+    <Provider store={serverStore}>
+      <StaticRouter location={req.path}>
+        <Routes>
+          {
+            router?.map((item, idx) => (
+              <Route key={idx} {...item} />
+            ))
+          }
+        </Routes>
+      </StaticRouter>
+    </Provider>
   );
   const helmet = Helmet.renderStatic();
 
